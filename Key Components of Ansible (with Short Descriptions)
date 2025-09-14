@@ -1,0 +1,14 @@
+
+🔑 Key Components of Ansible (with Short Descriptions)
+    1. Inventory – List of target machines (static file or dynamic cloud inventory).
+    2. Modules – Pre-built units of work (e.g., install package, copy file, start service).
+    3. Tasks – Individual actions that use modules (written inside playbooks).
+    4. Playbooks – YAML files that define automation workflows (tasks + hosts + variables).
+    5. Handlers – Special tasks that run only when triggered (e.g., restart service after config change).
+    6. Variables – Store reusable values (package names, versions, file paths).
+    7.Templates (Jinja2) – Dynamic config files using variables and logic.
+    8. Roles – Standard way to organize playbooks into reusable structures.
+    9 .Ansible Galaxy – Public repository for community roles and collections.
+    10. Ansible Vault – Encrypts sensitive data like passwords and API keys.
+    11. Plugins – Extend Ansible features (connection, lookup, filter, callback).
+    12. Collections – Distributable bundles of roles, modules, and plugins (e.g., AWS, Kubernetes).
