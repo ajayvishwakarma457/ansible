@@ -1,0 +1,101 @@
+🛠️ Ansible Learning Roadmap (Beginner → Expert)
+
+🔹 Beginner (Foundations)
+
+  1. What is Ansible?
+    Basics of automation, IaC, agentless architecture.
+    Push vs Pull model.
+
+  2. Installation & Setup
+    Install Ansible on Linux/Mac/WSL.
+    Understand inventory (hosts.ini) and ansible.cfg.
+    Run ad-hoc commands (ansible all -m ping).
+
+  3. YAML Basics
+    Learn YAML syntax (indentation, lists, dictionaries).
+
+  4. Playbooks
+    Write simple playbooks (install packages, copy files, start services).
+    Idempotency concept.
+
+🔹 Intermediate (Practical Usage)
+
+  5. Modules
+    Common modules: apt, yum, service, copy, template, user, file.
+    Cloud modules: AWS EC2, S3, RDS, IAM.
+
+  6. Variables & Facts
+    Define variables in playbooks, group_vars, host_vars.
+    Use ansible_facts (OS, IP, memory).
+
+  7. Handlers & Notifications
+    Restart services only when config changes.
+
+  8. Templates (Jinja2)
+    Create dynamic config files (nginx.conf, app.env).
+
+  9. Loops & Conditionals
+    Loop through users, packages, or files.
+    Run tasks only on certain OS / environments.
+
+  10. Error Handling
+    ignore_errors, when, failed_when.
+
+
+🔹 Advanced (Industry Approach)
+
+  11. Roles & Best Practices
+    Structure playbooks into roles (tasks/, handlers/, vars/, templates/).
+    Use Galaxy roles (ansible-galaxy init role_name).
+
+  12. Ansible Vault
+    Encrypt secrets (DB passwords, API keys).
+    Use with CI/CD pipelines.
+
+  13. Dynamic Inventory
+    AWS EC2 plugin (fetch servers by tags).
+    Azure/GCP/VMware inventory plugins.
+
+  14. Ansible Tower / AWX
+    Web UI & RBAC for Ansible in enterprises.
+    Job templates, scheduling, approvals.
+
+  15. CI/CD Integration
+    Run Ansible playbooks inside Jenkins/GitHub Actions pipelines.
+    GitOps approach.
+
+  16. Ansible + Terraform
+    Terraform → Provision infrastructure.
+    Ansible → Configure + deploy apps.
+
+  17. Ansible + Kubernetes
+    Deploy Docker images to EKS/ECS/K8s.
+    Configure monitoring/logging.
+
+  18. Performance & Scaling
+    Parallelism (forks, serial).
+    Delegation, async tasks.
+
+🔹 Expert (Enterprise Grade)
+
+  19. Testing
+    Use ansible-lint, molecule for testing roles.
+    CI pipelines with playbook validation.
+
+  20. Compliance & Security
+    Security hardening playbooks (CIS benchmark).
+    Automate OS patching across 1000+ servers.
+
+  21. Advanced Orchestration
+    Multi-tier app deployment (web + app + DB).
+    Blue-green & rolling deployments.
+
+  22. Contribute & Optimize
+    Contribute to Ansible Galaxy roles.
+    Write custom modules & plugins (Python).
+
+✅ Summary Path:
+    Beginner → Basics, Playbooks, Modules.
+    Intermediate → Variables, Templates, Handlers, Loops.
+    Advanced → Roles, Vault, Dynamic Inventory, CI/CD, Cloud.
+    Expert → Tower/AWX, Testing, Security, Orchestration, Custom modules.
