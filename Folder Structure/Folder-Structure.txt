@@ -1,0 +1,57 @@
+ansible-project/
+│── ansible.cfg              # Global config (inventory, roles_path, ssh, forks etc.)
+│── requirements.yml         # External roles/collections (Galaxy or Git repo)
+│── site.yml                 # Entry point playbook (or main.yml)
+│── README.md                # Documentation for usage
+
+│── inventories/             # Environment-specific inventory
+│   ├── dev/
+│   │   ├── hosts.ini
+│   │   ├── group_vars/
+│   │   │   ├── all.yml
+│   │   │   └── web.yml
+│   │   └── host_vars/
+│   │       └── web01.yml
+│   ├── stage/
+│   │   └── hosts.ini
+│   └── prod/
+│       └── hosts.ini
+
+│── group_vars/              # Global variables for groups
+│   └── all.yml
+
+│── host_vars/               # Host specific variables
+│   └── hostname.yml
+
+│── roles/                   # Reusable roles
+│   ├── common/
+│   │   ├── tasks/
+│   │   │   └── main.yml
+│   │   ├── handlers/
+│   │   │   └── main.yml
+│   │   ├── templates/
+│   │   │   └── some_template.j2
+│   │   ├── files/
+│   │   │   └── some_file.conf
+│   │   ├── vars/
+│   │   │   └── main.yml
+│   │   ├── defaults/
+│   │   │   └── main.yml
+│   │   └── meta/
+│   │       └── main.yml
+│   │
+│   ├── nginx/
+│   ├── mysql/
+│   └── app/
+
+│── playbooks/               # Reusable playbooks
+│   ├── webservers.yml
+│   ├── database.yml
+│   └── deploy.yml
+
+│── library/                 # Custom Ansible modules (if needed)
+│── filter_plugins/          # Custom Jinja2 filters
+│── files/                   # Shared static files
+│── templates/               # Shared Jinja2 templates
+│── vars/                    # Extra variables
+│   └── global.yml
