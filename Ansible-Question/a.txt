@@ -1,0 +1,36 @@
+a. Basic Concepts and Definitions:
+   1. What is Ansible, and what are its primary uses?
+   2. Explain the key components of Ansible architecture.
+   3. How does Ansible differ from other configuration management tools like Puppet or Chef?
+   4. What is a playbook in Ansible?
+   5. What are Ansible modules, and how are they used?
+   6. Explain Ansible inventory and its purpose.
+   7. What is Ansible Galaxy?
+   8. What is an ad-hoc command in Ansible?
+   9. Explain the concept of idempotency in Ansible.
+
+
+b. Intermediate Concepts and Usage:
+  1. What are Ansible roles, and why are they used?
+  2. How do you define and use variables in Ansible?
+  3. What is a handler in Ansible, and how is it used? 
+  4. How can you secure sensitive data in Ansible playbooks (e.g., passwords, API keys)?
+  5. How does Ansible handle conditional execution of tasks?
+  6. Explain the purpose of Ansible Vault.
+  7. What is Ansible Tower/AWX, and how does it enhance Ansible capabilities?
+  8. How do you manage different environments (development, testing, production) with Ansible? 
+  9. Explain the difference between a play and a playbook in Ansible. 
+
+
+c. Advanced Concepts and Scenario-Based Questions:
+  1. How would you optimize Ansible performance for large-scale environments?
+  2. Explain how Ansible integrates with CI/CD pipelines.
+  3. Describe a scenario where you would use dynamic inventory.
+  4. How do you handle error handling and task failures in Ansible playbooks?
+  5. Discuss the use of Ansible Collections.
+  6. How does Ansible support multi-cloud automation?
+  7. Describe a scenario where you implemented a rolling update with zero downtime using Ansible.
+  8. How would you troubleshoot a failing Ansible playbook?
+  9. Explain how to manage configuration drift using Ansible.
+  10. How would you approach migrating legacy scripts or automation to Ansible? 
+
