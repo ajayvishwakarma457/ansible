@@ -1,0 +1,49 @@
+ansible/
+├── ansible.cfg
+├── inventory/
+│   ├── dev/
+│   │   └── hosts
+│   ├── stage/
+│   │   └── hosts
+│   └── prod/
+│       └── hosts
+├── group_vars/
+│   ├── all.yml
+│   ├── dev.yml
+│   ├── stage.yml
+│   └── prod.yml
+├── host_vars/
+│   ├── web01.yml
+│   └── db01.yml
+├── roles/
+│   ├── common/
+│   │   ├── tasks/
+│   │   │   └── main.yml
+│   │   ├── handlers/
+│   │   │   └── main.yml
+│   │   ├── templates/
+│   │   ├── files/
+│   │   ├── vars/
+│   │   │   └── main.yml
+│   │   ├── defaults/
+│   │   │   └── main.yml
+│   │   ├── meta/
+│   │   │   └── main.yml
+│   │   └── tests/
+│   │       ├── inventory
+│   │       └── test.yml
+│   └── webserver/
+│       ├── tasks/
+│       ├── handlers/
+│       ├── templates/
+│       ├── files/
+│       ├── vars/
+│       ├── defaults/
+│       ├── meta/
+│       └── tests/
+├── playbooks/
+│   ├── site.yml
+│   ├── webservers.yml
+│   └── dbservers.yml
+└── scripts/
+    └── custom_scripts.sh

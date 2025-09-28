@@ -1,0 +1,37 @@
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python (if you later use Ansible plugins/modules in Python)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs
+*.log
+
+# Temporary / backup files
+*~
+*.bak
+*.tmp
+
+# Ansible-specific (if you use vault or inventory secrets later)
+*.retry
+*.vault
+*.secret
