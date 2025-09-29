@@ -1,0 +1,54 @@
+🚀 AWS + EC2 Learning Roadmap (Basic → Expert)
+
+    1. EC2 Basics (Beginner)
+        1. What is EC2, instance types, pricing models (On-demand, Reserved, Spot).
+        2. Launching EC2 instance (which you’ve done ✅).
+        3. Connect via SSH using .pem key.
+        4. Installing software (Node.js, Nginx, Docker, etc.).
+        5. Security Groups (allowing inbound ports 22/80/443).
+        6. Elastic IP (attach static IP to instance).
+        👉 Practice: Deploy a simple Node.js / Next.js app on EC2 manually.
+
+
+    2. Intermediate Level (Industry Use-Cases)
+        1. EBS Volumes: Attach, detach, resize storage.
+        2. AMI (Amazon Machine Image): Create your own reusable server images.
+        3. Load Balancer (ALB/NLB): Distribute traffic across instances.
+        4. Auto Scaling Groups: Handle traffic spikes.
+        5. IAM Roles for EC2 (accessing S3, DynamoDB, etc. without storing credentials).
+        6. CloudWatch Monitoring & Alarms for CPU, Memory, Disk.
+        👉 Practice: Deploy your app on 2 EC2 instances + Load Balancer + Auto Scaling.
+
+
+    3. Advanced Level (MNC-Style Setup)
+        1. Networking: VPC, subnets (public/private), NAT Gateway, route tables.
+        2. Private EC2 + Bastion Host for security.
+        3. Elastic File System (EFS): Shared storage across multiple EC2s.
+        4. System Manager (SSM): Access EC2 without SSH keys.
+        5. Blue/Green Deployment with EC2 + Load Balancer.
+        6. CloudFormation / Terraform for EC2 automation (infra-as-code).
+        7. Ansible for configuration management.
+        8. CI/CD pipelines (GitHub Actions → EC2 deploy via CodeDeploy).
+        👉 Practice: Automate full VPC + EC2 + ALB + ASG + CloudWatch setup using Terraform & Ansible.
+
+
+    4. Expert Level (MNC Production Practices)
+        1. Zero Downtime Deployments (Rolling, Blue/Green, Canary).
+        2. Security Hardening:
+            1. Restricting inbound rules, using SSM instead of SSH.
+            2. Patching EC2 with SSM Patch Manager.
+            3. Secrets via AWS Systems Manager Parameter Store / Secrets Manager.
+        3. High Availability & DR:
+            1. Multi-AZ deployment.
+            2. Backups & Snapshots automation.
+        4. Cost Optimization:
+            1. Reserved/Spot Instances.
+            2. Rightsizing EC2.
+        5. Observability:
+            1. CloudWatch Logs, Metrics.
+            2. Centralized logging with ELK/CloudWatch Logs Insights.
+        6. Migration to Serverless / Containers:
+            1. Running workloads on ECS, EKS, or App Runner.
+            2. Using EC2 only when required.
+        👉 Practice: Replicate MNC architecture (multi-AZ, automated, secure, cost-optimized).
+
