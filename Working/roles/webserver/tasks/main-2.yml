@@ -1,0 +1,34 @@
+- name: Install nginx
+  apt:
+    name: "{{ web_package }}"
+    state: present
+    update_cache: yes
+
+- name: Ensure nginx is running
+  service:
+    name: "{{ web_service }}"
+    state: started
+    enabled: yes
+
+- name: Deploy index.html
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+  notify: restart nginx
+
+
+- name: Create app directory
+  file:
+    path: /home/ubuntu/app
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+    mode: '0755'
+
+- name: Deploy .env file from template
+  template:
+    src: .env.j2
+    dest: /home/ubuntu/app/.env
+    owner: ubuntu
+    group: ubuntu
+    mode: '0600'

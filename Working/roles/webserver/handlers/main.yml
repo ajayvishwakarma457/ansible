@@ -1,4 +1,11 @@
 - name: restart nginx
   service:
-    name: "{{ web_service }}"
+    name: nginx
     state: restarted
+
+- name: restart nodeapp
+  systemd:
+    name: nodeapp
+    state: restarted
+    enabled: yes
+    daemon_reload: yes

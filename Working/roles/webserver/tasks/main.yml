@@ -1,17 +1,48 @@
-- name: Install nginx
-  apt:
-    name: "{{ web_package }}"
-    state: present
-    update_cache: yes
+- name: Ensure app directory exists
+  file:
+    path: /home/ubuntu/app
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+    mode: '0755'
 
-- name: Ensure nginx is running
-  service:
-    name: "{{ web_service }}"
-    state: started
-    enabled: yes
-
-- name: Deploy index.html
+- name: Deploy .env file
   template:
-    src: index.html.j2
-    dest: /var/www/html/index.html
-  notify: restart nginx
+    src: .env.j2
+    dest: /home/ubuntu/app/.env
+    owner: ubuntu
+    group: ubuntu
+    mode: '0600'
+
+- name: Install Node.js and npm
+  apt:
+    name: nodejs
+    state: present
+  become: yes
+
+- name: Install npm (separately, since Ubuntu often splits it)
+  apt:
+    name: npm
+    state: present
+  become: yes
+
+- name: Deploy app code (from GitHub repo)
+  git:
+    repo: "https://github.com/ajayvishwakarma457/test-nodejs.git"
+    dest: /home/ubuntu/app
+    version: main
+    force: yes
+    update: yes
+
+- name: Install Node.js dependencies
+  npm:
+    path: /home/ubuntu/app
+    production: yes
+  become: yes
+
+- name: Copy systemd service file
+  template:
+    src: nodeapp.service.j2
+    dest: /etc/systemd/system/nodeapp.service
+    mode: '0644'
+  notify: restart nodeapp

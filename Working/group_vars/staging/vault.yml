@@ -1,0 +1,3 @@
+db_user: "staging_user"
+db_password: "staging_password"
+api_key: "staging_api_123"

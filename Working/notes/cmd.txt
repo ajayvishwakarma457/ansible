@@ -11,6 +11,7 @@ ansible all -i hosts.ini -m shell -a "echo Hello from Ansible"
 ansible web -i hosts.ini -m copy -a "src=./localfile.txt dest=/home/ubuntu/remote.txt"
 ansible-playbook -i inventories/production/hosts.ini site.yml
 ansible-playbook -i inventories/staging/hosts.ini site.yml   
+ansible-playbook -i inventories/staging/hosts.ini site.yml --ask-vault-pass
 
 
 
