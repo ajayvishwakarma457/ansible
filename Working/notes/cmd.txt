@@ -1,0 +1,17 @@
+sudo apt update
+sudo apt install ansible -y
+ansible --version
+ansible all -i hosts.ini -m ping
+ansible all -i hosts.ini -m shell -a "uptime"
+ansible all -i hosts.ini -m shell -a "df -h"
+ansible all -i hosts.ini -m shell -a "free -m"
+ansible web -i hosts.ini -m shell -a "uptime"
+ansible-playbook -i hosts.ini install-nginx.yml
+ansible all -i hosts.ini -m shell -a "echo Hello from Ansible"
+ansible web -i hosts.ini -m copy -a "src=./localfile.txt dest=/home/ubuntu/remote.txt"
+ansible-playbook -i inventories/production/hosts.ini site.yml
+ansible-playbook -i inventories/staging/hosts.ini site.yml   
+
+
+
+    

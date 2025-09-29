@@ -1,0 +1,7 @@
+- name: Configure Webserver using Role
+  hosts: staging
+  become: yes
+  roles:
+    - webserver
+
+    

@@ -1,0 +1,4 @@
+# web_package: nginx
+# web_service: nginx
+# web_page: "Hello from Role Vars!" 
+
